@@ -16,10 +16,14 @@ body{
 	margin-top: 0px;
 
 }
-
+.head p{
+	display: inline;
+}
 #b{
-	font-size: 40px;
+	font-size: 35px;
 	color: green;
+	font-family: 'Kavoon';
+	
 }
 .head ul{
 	font-size: 20px;
@@ -34,6 +38,12 @@ body{
 } 	
 .head ul li:hover{
 	color: green;
+}
+#sign{
+	border-radius: 10px;
+	background-color: white;
+	color: black;
+	padding: 5px;
 }
 
 	

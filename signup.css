@@ -1,0 +1,100 @@
+body{
+	margin:0;
+}
+.head{
+	margin:0;
+	background-color: black;
+	color: white;
+	position: sticky;
+	top: 0px;
+	border: 1px solid black;
+
+}
+#b{
+	margin: 0;
+	padding: 5px;
+	font-size: 30px;
+	margin-left: 50px;
+	color: green;
+	font-family: 'Kavoon';
+	
+}
+#box{
+	
+	width:400px;
+	height:600px;
+	justify-content: center;
+	margin-left: 400px;
+
+}
+#p{
+	margin-left: 50px;
+	font-size: 30px;
+}
+#email{
+
+	block-size:30px ;
+	inline-size: 300px;
+	margin-left: 50px;
+	border:2px solid black;
+	border-radius:10px;
+	padding: 5px;
+	font-size: 16px
+}
+#button{
+	block-size:50px ;
+	inline-size: 310px;
+	margin-left: 50px;
+	margin-top: 10px;
+	border-radius:10px;
+	padding: 5px;
+	font-size: 16px;
+	color: white;
+	background-color: black;
+}
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: black;
+    margin-top: 20px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid gray;
+}
+
+.divider::before {
+    margin-right: 10px;
+}
+
+.divider::after {
+    margin-left: 10px;
+}
+.button{
+	border: none;
+	block-size:50px ;
+	inline-size: 310px;
+	margin-left: 50px;
+	margin-top: 10px;
+	border-radius:10px;
+	padding: 10px;
+	font-size: 16px;
+	color: black;
+	background-color:lightgrey;
+
+}.login p{
+	text-align:center;
+}
+#logininput{
+	block-size:30px ;
+	inline-size: 300px;
+	margin-left: 50px;
+	border:2px solid black;
+	border-radius:10px;
+	padding: 5px;
+	font-size: 16px
+}

@@ -1,30 +1,42 @@
 body{
-	background-image: url(https://coolbackgrounds.imgix.net/219VUMa1SOxASKqCE2OgT4/be1c810344587bd7f6f203337d23602a/ranger-4df6c1b6.png?w=3840&q=60&auto=format,compress);
+	margin: 0;
+	background-repeat: no-repeat;
+	background-size: 1450px;
+	
 }
+
 .header{
-	color:white;
+
+	border:1px solid black;
 	background-color: black;
-	margin-top: 0px;
-	width: 100%;
-	height: 70px;
-	position: absolute;
-	top: 0px;
-	left:0px;
-	padding: 10px;
+	height: 80px;
+	margin-bottom: 20px;
+}
+.header h1{
+	color: white;
+}
+.header p{
+	display:inline;
+}
+#wheel{
+	color:green;
+	font-size:35px;
+	font-family: 'Kavoon';	
 }
 .navigation{
-	display: block;
-	margin-top: 100px;
-	margin-left: 800px;
-	font-size: 30px;
-	border-radius: 8px;
+
+	float: right;
+	margin-right: 30px;
+	font-size: 20px;
 	position: sticky;
 	top: 1px;
 	
 }
-.navigation b{	background-color: #458BE6;
+.navigation b{	
+	background-color: black;
+	color: white;
 	padding:7px;
-	border-radius: 5px;
+	border-radius: 15px;
 	
 }
 .navigation a{
@@ -43,12 +55,25 @@ a{
 }
 .heading{
 	text-align: center;
-	color: green;
+	/*color: green;*/
 	font-size: 50px;
-	font-family: times new roman;
+	margin-left: 190px;
+	 /*font-family: 'Notable';*/
+	font-family: 'Almendra';
+
+	
+}
+#backtext{
+
+	font-size:50px;
+	font-family: 'Kavoon';	
+	opacity:0.3;
+	position: fixed;
+	margin-left: 10px;
+	
 }
 .form{
-	/*border: 2px solid black;*/
+	
 	float: center;
 	margin: auto;
 	width: 600px;
@@ -65,13 +90,18 @@ form{
 	block-size: 50px;
 	inline-size: 400px;
 	padding:5px;
-	border: 4px solid yellow;
+	border: 4px solid yellow;	
 	margin-top: 5px;
 	font-size: 20px;
 	border-radius: 15px;
 	margin-top: 10px;
+	transition: border 0.2s;
 }
-.button{
+.input:focus{
+	outline: none;
+	border:4px solid green;
+}
+#button{
 	display: block;
 	background-color: yellow;
 	color:black;
@@ -84,9 +114,16 @@ form{
 	margin-top: 10px;
 	font-style: bold;
 	font-weight: 60px;
+	font-family: 'Bigshot One';
 	padding: 10px;
-	/*font-family: arial;*/
+	
 }
+
+#button:active {
+    transform: scale(0.95);
+    
+}
+
 .area{
 	text-align: center;
 	font-weight: 100px;
