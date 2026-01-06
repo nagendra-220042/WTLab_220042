@@ -5,18 +5,48 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>History</title>
 	<link rel="icon" type="image/png" href="resources\bike.jpg">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="history.css"> -->
 </head>
 <body>
 	<header class="header">
-		<h1 align="left">Welcome to the <b>WheelsOnFire</b></h1>
+		<h1 align="left"  >Welcome to the <b id="head">WheelsOnFire</b></h1>
 	</header>
+	<h2 id="but">Toggling is here</h2>
+	<ul id="list">
+		
+	</ul>
+
+	
+	<button onclick="button()">Toggle Button</button>
 	<nav class="navigation">
 		<b><a href="index.html"  target="_self">Home</a></b>
 		<b><a href="book.html" target="_blank">Book Ride</a></b>
 		<a href="#about"><b>About Us</b></a>
 		</nav>
 	<div>
+	<table rules="All" border="1" cellpadding="5">
+		<tr>
+			<td>Sno</td>
+			<td>Vehicle</td>
+			<td>Wheels</td>
+		</tr>
+	<tr>
+		<td>1</td>
+		<td>Bike</td>
+		<td>2</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>Auto</td>
+		<td>3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Car</td>
+		<td>4</td>
+	</tr>
+
+</table>
 	<audio src="resources\Sanchari.mp3" controls></audio>
 	<video src="resources\74578-552712232_tiny.mp4" controls width="600px" height="400px"></video>
 </div>
@@ -28,6 +58,58 @@
 	<iframe src="https://rguktn.ac.in/"></iframe>
 </frameset>
 </div>
+		<script>
+		// alert("Welcome to Wheelsonfire");
+		const a =prompt("Enter the your name:");
+		document.getElementById("head").innerHTML="Wheelsonfire MR "+a;
+		let b="Enjoy a fast and safe ride";
+		document.write(b);
+
+
+
+		let flag=1;
+		function button(){
+			if(flag){
+			document.getElementById("but").innerHTML="Button clicked";
+			flag=0;
+			
+			}
+			else{
+				document.getElementById("but").innerHTML="Button is unclicked";
+				flag=1;
+			}
+		}
+
+
+		function add(a,b){
+			return a+b;
+		}
+		c=add(2,4);
+		console.log(c);
+
+		const addition =(a,b)=>{
+			return a+b;
+		}
+		console.log(addition(4,5));
+
+
+
+		let obj1 = {
+			id:"N220042",
+			name:"GNK"
+		};
+		console.log(obj1.id);
+		console.log(obj1.name);
+		console.log(obj1["id"]);
+		obj1["campus"]="Nuzvid";
+		console.log(obj1);
+		for(let key in obj1){
+			document.getElementById("list").innerHTML+=`<li>${key} : ${obj1[key]}</li>`;
+			
+		}
+
+		
+	</script>
 <footer >
 	<div class="footer">
 		<b>copy right &copy; G Nagendra Kumar</b>
