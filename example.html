@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>first web page</title>
+	<!-- <script>
+		console.log("Hello World!");
+	</script> -->
+</head> 
+<body>
+	<h1 id="tag" onmouseover="mousein()" onmouseout="mouseout()" >RGUKT</h1>
+	<button type="button" >button</button>
+	
+	<!-- ========Task 1======== -->
+    <script>
+    	var n=12;
+    	console.log(n);
+    	var n=14;
+    	console.log(n)
+    	let b=13;
+    	console.log(b);
+    	b=15;
+    	console.log(b);
+    	const c=16;
+    	console.log(c);
+    </script>
+
+
+    <!-- ========Task 2======== -->
+    <script>
+    	function hi() {   	
+  			console.log("Hello World!");
+		}
+
+		// console.log(hi());
+		var double = n =>2*n;
+		//console.log(double(3));
+		function addition(a,b){
+			return a+b;
+		}
+		// var c=addition(2,3);
+		// console.log(c);
+		function sub(a,b){
+			console.log(a-b);
+		}
+		sub(10,5);
+    </script>
+
+
+    <!-- ========Task 3======== -->
+    <script>
+    	alert("Hello World");
+    	// let a=prompt("Enter your name:");
+    	// console.log("The name you have entered is:"+a);
+
+    </script>
+
+
+    <!-- ========Task 4======== -->
+    
+    <script>
+    	function fun(){
+    		document.getElementById("tag").innerHTML="WELCOME TO RGUKT";
+    	}
+    </script>
+    
+    <script>
+    
+    	function add(){
+    		var v=prompt("Enter the text:");
+    		document.getElementById("tag").innerHTML=v;
+    	}
+    </script>
+
+
+    <!-- ========Task 5======== -->
+    <script>
+    	function color(){
+    		document.getElementById("tag").style.color="red";
+    	}
+    	function font(){
+    		document.getElementById("tag").style.fontSize="50px";
+    	}
+    	function back(){
+    		document.getElementById("tag").style.backgroundColor="green";
+    	}
+    	let flag=false;
+    	function toggle(){
+    		
+    		let t=document.getElementById("tag");
+    		if(!flag){
+    			t.style.color="olive";
+    			t.style.fontSize="50px";
+    			t.style.fontFamily="Cursive";
+    			flag=true;
+    		}
+    		else{
+    			t.style.color="black";
+    			t.style.fontSize="32px";
+    			t.style.fontFamily="TimesNewRoman";
+    			flag=false;
+    		}
+    	}
+    	
+    	
+    </script>
+    <!-- ========Task 6======== -->
+    <script>
+    	function mousein(){
+    		document.getElementById("tag").style.color="orange";
+    	}
+    	function mouseout(){
+    		document.getElementById("tag").style.color="black";
+    	}
+    	function done(e){
+    		e.preventDefault();
+    		console.log("Submitted!");
+    	}
+    </script>
+    <form>
+    	<button type="button" onclick="done(e)">Submit</button>
+    </form>
+    <!-- ========Task 7======== -->
+    <script>
+    	let a=prompt("Please enter your name:");
+    	document.getElementById("tag").innerHTML="Hello MR "+a+" 👋 WELCOME"; 
+    </script>
+    <button onclick="window.print()">Print Page</button>
+
+
+</body>
+</html>
