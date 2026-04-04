@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Firebase Google Login</title>
+</head>
+<body>
+
+<h2>Firebase Login (Frontend → Backend)</h2>
+
+<button id="loginBtn">Login with Google</button>
+
+<br><br>
+
+<div id="result">Not logged in</div>
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { 
+  getAuth, 
+  GoogleAuthProvider, 
+  signInWithRedirect,
+  onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+// 🔴 Replace with your real Firebase config
+const firebaseConfig = {
+  apiKey: "AIzaSyCkUrWpPxqzwVnaBhCIhKsgtMW9CPFdSJo",
+  authDomain: "wheelsonfire-f088e.firebaseapp.com",
+  projectId: "wheelsonfire-f088e",
+  appId: "1:333405935978:web:b6cc208497ab2854b46d13"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
+
+const resultDiv = document.getElementById("result");
+
+// Login button
+document.getElementById("loginBtn").onclick = () => {
+  signInWithRedirect(auth, provider);
+};
+
+// Detect user AFTER redirect (this is the key fix)
+onAuthStateChanged(auth, async (user) => {
+
+  console.log("User:", user);  // 🔎 Check console
+
+  if (user) {
+
+    const idToken = await user.getIdToken();
+
+    // Send token to backend
+    fetch("firebasebackend.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ token: idToken })
+    })
+    .then(res => res.text())
+    .then(data => {
+      resultDiv.innerHTML = data;
+    });
+
+  } else {
+    resultDiv.innerHTML = "Not logged in";
+  }
+
+});
+
+</script>
+
+</body>
+</html>
